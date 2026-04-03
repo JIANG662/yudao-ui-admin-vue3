@@ -4,3 +4,22 @@
 // .dark .dark\:text-color {
 //   color: rgba(255, 255, 255, var(--dark-text-color));
 // }
+// 如果 logo 是图片形式
+.layout-logo {
+  img {
+    width: 32px;  // 调整宽度
+    height: 32px; // 调整高度
+    object-fit: contain;
+  }
+}
+
+// 如果 logo 包含文字
+.logo-text {
+  font-size: 14px; // 调整字体大小
+}
+
+// 调整整个 logo 容器的大小
+.logo {
+  width: auto;
+  padding: 0 12px; // 调整左右内边距
+}

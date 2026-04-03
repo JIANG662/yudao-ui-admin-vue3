@@ -75,21 +75,21 @@ function getUrlValue(key: string): string {
   return url.searchParams.get(key) ?? ''
 }
 
-const bind = (row) => {
-  // 双层 encode 解决钉钉回调 type 参数丢失的问题
-  const redirectUri = location.origin + '/user/profile?' + encodeURIComponent(`type=${row.type}`)
-  // 进行跳转
-  socialAuthRedirect(row.type, encodeURIComponent(redirectUri)).then((res) => {
-    window.location.href = res
-  })
-}
-const unbind = async (row) => {
-  const res = await socialUnbind(row.type, row.openid)
-  if (res) {
-    row.openid = undefined
-  }
-  message.success('解绑成功')
-}
+// const bind = (row) => {
+//   // 双层 encode 解决钉钉回调 type 参数丢失的问题
+//   const redirectUri = location.origin + '/user/profile?' + encodeURIComponent(`type=${row.type}`)
+//   // 进行跳转
+//   socialAuthRedirect(row.type, encodeURIComponent(redirectUri)).then((res) => {
+//     window.location.href = res
+//   })
+// }
+// const unbind = async (row) => {
+//   const res = await socialUnbind(row.type, row.openid)
+//   if (res) {
+//     row.openid = undefined
+//   }
+//   message.success('解绑成功')
+// }
 
 onMounted(async () => {
   await initSocial()

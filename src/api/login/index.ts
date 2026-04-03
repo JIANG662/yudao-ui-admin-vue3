@@ -70,11 +70,11 @@ export function socialLogin(type: string, code: string, state: string) {
 }
 
 // 社交授权的跳转
-export const socialAuthRedirect = (type: number, redirectUri: string) => {
-  return request.get({
-    url: '/system/auth/social-auth-redirect?type=' + type + '&redirectUri=' + redirectUri
-  })
-}
+// export const socialAuthRedirect = (type: number, redirectUri: string) => {
+//   return request.get({
+//     url: '/system/auth/social-auth-redirect?type=' + type + '&redirectUri=' + redirectUri
+//   })
+// }
 // 获取验证图片以及 token
 export const getCode = (data: any) => {
   return request.postOriginal({ url: 'system/captcha/get', data })

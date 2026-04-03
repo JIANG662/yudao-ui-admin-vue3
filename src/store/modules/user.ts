@@ -84,7 +84,11 @@ export const useUserStore = defineStore('admin-user', {
       wsCache.set(CACHE_KEY.USER, userInfo)
     },
     async loginOut() {
-      await loginOut()
+      try {
+        await loginOut()
+      } catch (error) {
+        console.error('Logout failed:', error)
+      }
       removeToken()
       deleteUserCache() // 删除用户缓存
       this.resetState()

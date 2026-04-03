@@ -48,6 +48,7 @@ const parseURL = (
 
 // 路由不重定向白名单
 const whiteList = [
+  '/',
   '/login',
   '/social-login',
   '/auth-redirect',
@@ -62,7 +63,7 @@ router.beforeEach(async (to, from, next) => {
   loadStart()
   if (getAccessToken()) {
     if (to.path === '/login') {
-      next({ path: '/' })
+      next({ path: '/index' })
     } else {
       const dictStore = useDictStoreWithOut()
       const userStore = useUserStoreWithOut()

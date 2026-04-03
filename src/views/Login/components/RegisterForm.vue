@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <el-form
     v-show="getShow"
     ref="formLogin"
@@ -285,4 +285,4 @@ onMounted(() => {
     cursor: pointer;
   }
 }
-</style>
+</style> -->

@@ -52,13 +52,20 @@ const remainingRouter: AppRouteRecordRaw[] = [
   },
   {
     path: '/',
+    name: 'LuroHome',
+    component: () => import('@/views/Home/LuroIndex.vue'),
+    meta: {
+      hidden: true
+    }
+  },
+  {
+    path: '/index',
     component: Layout,
-    redirect: '/index',
     name: 'Home',
     meta: {},
     children: [
       {
-        path: 'index',
+        path: '',
         component: () => import('@/views/Home/Index.vue'),
         name: 'Index',
         meta: {

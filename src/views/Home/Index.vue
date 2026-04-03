@@ -186,7 +186,6 @@ import { EChartsOption } from 'echarts'
 import { formatTime } from '@/utils'
 
 import { useUserStore } from '@/store/modules/user'
-// import { useWatermark } from '@/hooks/web/useWatermark'
 import type { WorkplaceTotal, Project, Notice, Shortcut } from './types'
 import { pieOptions, barOptions } from './echarts-data'
 import { useRouter } from 'vue-router'
@@ -196,7 +195,6 @@ defineOptions({ name: 'Index' })
 const { t } = useI18n()
 const router = useRouter()
 const userStore = useUserStore()
-// const { setWatermark } = useWatermark()
 const loading = ref(true)
 const avatar = userStore.getUser.avatar
 const username = userStore.getUser.nickname
@@ -207,7 +205,6 @@ let totalSate = reactive<WorkplaceTotal>({
   access: 0,
   todo: 0
 })
-
 const getCount = async () => {
   const data = {
     project: 40,
@@ -216,7 +213,6 @@ const getCount = async () => {
   }
   totalSate = Object.assign(totalSate, data)
 }
-
 // 获取项目数
 let projects = reactive<Project[]>([])
 const getProject = async () => {
@@ -272,7 +268,6 @@ const getProject = async () => {
   ]
   projects = Object.assign(projects, data)
 }
-
 // 获取通知公告
 let notice = reactive<Notice[]>([])
 const getNotice = async () => {

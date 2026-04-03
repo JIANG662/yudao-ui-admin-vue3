@@ -68,18 +68,19 @@ watch(
     >
       <img
         class="h-[calc(var(--logo-height)-10px)] w-[calc(var(--logo-height)-10px)]"
-        src="@/assets/imgs/logo.png"
+        src="@/assets/imgs/logo.png" style="height: 40px; width: auto;"
       />
       <div
         v-if="show"
         :class="[
-          'ml-10px text-16px font-700',
+          'ml-10px text-13px font-600',
           {
             'text-[var(--logo-title-text-color)]': layout === 'classic',
             'text-[var(--top-header-text-color)]':
               layout === 'topLeft' || layout === 'top' || layout === 'cutMenu'
           }
         ]"
+        style="margin-left: 3px;"
       >
         {{ title }}
       </div>
