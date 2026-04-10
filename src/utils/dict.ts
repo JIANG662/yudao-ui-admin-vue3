@@ -113,6 +113,16 @@ export enum DICT_TYPE {
   TERMINAL = 'terminal', // 终端
   DATE_INTERVAL = 'date_interval', // 数据间隔
 
+ // ========== ASSET 模块 ==========
+PRODUCT_READY_FLAG = 'product_ready_flag', // 是否已生成产品
+STATUS = 'status', // asset和product共用状态
+PRODUCT_TYPE = 'product_type', // 产品类型: API/文件/数据库等
+SOURCE_TYPE = 'source_type', // 关联多个业务主表 
+IS_PRIVACY = 'is_privacy', // 是否涉隐私
+ASSET_TYPE = 'asset_type', // 业务类型: 资产/产品/数据库等
+PARSE_STATUS = 'parse_status', // 解析状态
+USAGE_PURPOSE = 'usage_purpose', // 使用用途
+
   // ========== SYSTEM 模块 ==========
   SYSTEM_USER_SEX = 'system_user_sex',
   SYSTEM_MENU_TYPE = 'system_menu_type',

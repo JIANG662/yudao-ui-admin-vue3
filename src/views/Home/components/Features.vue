@@ -47,19 +47,30 @@ const features = [
     <LuroContainer>
       <div class="text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">全方位数字化业务矩阵</h2>
-        <p class="text-white/60 text-lg">基于 100% 源码交付的自研底座，为您提供安全、稳定、可扩展的企业级技术支撑。</p>
+        <p class="text-white/60 text-lg"
+          >基于 100% 源码交付的自研底座，为您提供安全、稳定、可扩展的企业级技术支撑。</p
+        >
       </div>
     </LuroContainer>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
-      <LuroContainer v-for="(feature, index) in features" :key="index" :delay="0.1 * index">
-        <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 group h-full flex flex-col">
-          <div :class="['w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 transition-transform group-hover:scale-110', feature.color]">
+      <LuroContainer v-for="(feature, index) in features" :key="index" :delay="0.2 * Math.floor(index / 3)">
+        <div
+          class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 group h-full flex flex-col"
+        >
+          <div
+            :class="[
+              'w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 transition-transform group-hover:scale-110',
+              feature.color
+            ]"
+          >
             <Icon :icon="feature.icon" class="text-2xl" />
           </div>
           <h3 class="text-xl font-bold text-white mb-3">{{ feature.title }}</h3>
           <p class="text-white/50 leading-relaxed">{{ feature.description }}</p>
-          <div class="mt-auto pt-6 flex items-center text-sm font-medium text-white/40 group-hover:text-white transition-colors">
+          <div
+            class="mt-auto pt-6 flex items-center text-sm font-medium text-white/40 group-hover:text-white transition-colors"
+          >
             了解更多 <Icon icon="ep:arrow-right" class="ml-1 w-3 h-3" />
           </div>
         </div>

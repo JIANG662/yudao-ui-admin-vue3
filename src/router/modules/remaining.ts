@@ -702,16 +702,6 @@ const remainingRouter: AppRouteRecordRaw[] = [
     ]
   },
   {
-    path: '/:pathMatch(.*)*',
-    component: () => import('@/views/Error/404.vue'),
-    name: '',
-    meta: {
-      title: '404',
-      hidden: true,
-      breadcrumb: false
-    }
-  },
-  {
     path: '/iot',
     component: Layout,
     name: 'IOT',
@@ -753,6 +743,73 @@ const remainingRouter: AppRouteRecordRaw[] = [
         component: () => import('@/views/iot/ota/firmware/detail/index.vue')
       }
     ]
+  },
+  {
+    path: '/asset', // 父路由路径
+    component: Layout, // 使用 Layout 布局
+    name: 'Asset', // 路由名称
+    meta: {
+      hidden: true
+    },
+    children: [
+      {
+        path: 'audit-record', // 子路由路径，完整URL: /asset/audit-record
+        name: 'AssetAuditRecordPage',
+        alias: ['audit-record/index', 'auditRecord', 'auditRecord/index'],
+        meta: {
+          title: '通用审核',
+          noCache: true,
+          hidden: true,
+          activeMenu: '/asset/audit-record'
+        },
+        component: () => import('@/views/asset/auditRecord/index.vue')
+      },
+      {
+        path: 'asset-form',
+        name: 'AssetForm',
+        meta: {
+          title: '资产表单',
+          noCache: true,
+          hidden: true,
+          activeMenu: '/asset/asset-form'
+        },
+        component: () => import('@/views/asset/assetForm/index.vue')
+      },
+      {
+        path: 'data-asset',
+        name: 'DataAsset',
+        meta: {
+          title: '数据资产',
+          noCache: true,
+          hidden: true,
+          activeMenu: '/asset/data-asset'
+        },
+        component: () => import('@/views/asset/dataAsset/index.vue')
+      },
+      // 其他资产模块的子页面可以继续添加
+      {
+        path: 'asset-file',
+        name: 'AssetFile',
+
+        meta: {
+          title: '通用附件',
+          noCache: true,
+          hidden: true,
+          activeMenu: '/asset/asset-file'
+        },
+        component: () => import('@/views/asset/assetFile/index.vue')
+      }
+    ]
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('@/views/Error/404.vue'),
+    name: '',
+    meta: {
+      title: '404',
+      hidden: true,
+      breadcrumb: false
+    }
   }
 ]
 

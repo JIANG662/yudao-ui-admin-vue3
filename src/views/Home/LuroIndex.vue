@@ -2,8 +2,11 @@
 import { onMounted, onUnmounted } from 'vue'
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
+import Companies from './components/Companies.vue'
 import Features from './components/Features.vue'
 import Solutions from './components/Solutions.vue'
+// import Pricing from './components/Pricing.vue'
+import Reviews from './components/Reviews.vue'
 import LuroWrapper from './components/LuroWrapper.vue'
 import LuroContainer from './components/LuroContainer.vue'
 import Spotlight from './components/Spotlight.vue'
@@ -59,17 +62,28 @@ onUnmounted(() => {
         </LuroWrapper>
       </div>
 
+      <Companies />
+
       <Features />
 
       <Solutions />
+
+      <!-- <Pricing /> -->
+
+      <Reviews />
     </main>
 
-        <footer class="py-20 border-t border-white/10 bg-[#050505]">
+    <footer class="py-20 border-t border-white/10 bg-[#050505]">
       <LuroWrapper>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div class="col-span-1 md:col-span-1 space-y-6">
             <div class="flex items-center gap-2">
-              <img src="@/assets/imgs/logo.png" alt="Logo" style="height: 40px; width: auto;" class="w-auto h-20" />
+              <img
+                src="@/assets/imgs/logo.png"
+                alt="Logo"
+                style="height: 40px; width: auto"
+                class="w-auto h-20"
+              />
               <span class="text-xl font-bold tracking-tighter">图腾瑞智</span>
             </div>
             <p class="text-white/40 text-sm leading-relaxed">

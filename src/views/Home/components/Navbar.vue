@@ -65,7 +65,12 @@ onUnmounted(() => {
         >
           <div class="flex items-center flex-1 lg:flex-none pl-1">
             <router-link to="/" class="text-lg font-semibold text-white">
-              <img src="@/assets/imgs/logo.png" alt="Logo" style="height: 40px; width: auto;" class="w-auto h-8" />
+              <img
+                src="@/assets/imgs/logo.png"
+                alt="Logo"
+                style="height: 40px; width: auto"
+                class="w-auto h-8"
+              />
             </router-link>
             <span class="ml-2 text-lg font-semibold text-white">图腾瑞智·数字资产运营管理系统</span>
             <div class="items-center hidden ml-8 lg:flex gap-6">
@@ -147,14 +152,12 @@ onUnmounted(() => {
               >
                 登录
               </el-button>
-              
             </template>
             <el-button link class="lg:hidden p-2 w-8 h-8 text-white" @click="toggleMenu">
               <Icon :icon="isOpen ? 'ep:close' : 'ep:menu'" class="w-4 h-4" />
             </el-button>
           </div>
         </div>
-        
       </LuroWrapper>
     </header>
   </div>

@@ -55,11 +55,10 @@ const handleStart = () => {
       </div>
     </LuroContainer>
 
-    
     <BlurText
       word="释放数据价值"
       className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent py-2 md:py-0 lg:!leading-snug font-medium tracking-[-0.0125em] mt-6 font-heading"
-    />   
+    />
     <BlurText
       word="驱动企业智慧决策"
       className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent py-2 md:py-0 lg:!leading-snug font-medium tracking-[-0.0125em] mt-2 font-heading"
@@ -92,7 +91,6 @@ const handleStart = () => {
         </el-button>
       </div>
     </LuroContainer>
-    
   </div>
 </template>
 
