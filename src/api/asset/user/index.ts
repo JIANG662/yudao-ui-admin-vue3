@@ -1,16 +1,16 @@
 import request from '@/config/axios'
-import type { Dayjs } from 'dayjs';
+import type { Dayjs } from 'dayjs'
 
 /** 用户信息 */
 export interface User {
-          id: number; // 用户ID
-          companyId?: number; // 所属企业ID
-          username?: string; // 账号
-          passwordHash?: string; // 加密密码
-          role?: string; // 角色
-          status: string; // 状态
-          lastLoginTime: string | Dayjs; // 最后登录时间
-  }
+  id: number // 用户ID
+  companyId?: number // 所属企业ID
+  username?: string // 账号
+  passwordHash?: string // 加密密码
+  role?: string // 角色
+  status: string // 状态
+  lastLoginTime: string | Dayjs // 最后登录时间
+}
 
 // 用户 API
 export const UserApi = {
@@ -47,5 +47,5 @@ export const UserApi = {
   // 导出用户 Excel
   exportUser: async (params) => {
     return await request.download({ url: `/asset/user/export-excel`, params })
-  },
-}
+  }
+}

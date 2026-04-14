@@ -121,6 +121,10 @@ SOURCE_TYPE = 'source_type', // 关联多个业务主表
 IS_PRIVACY = 'is_privacy', // 是否涉隐私
 ASSET_TYPE = 'asset_type', // 业务类型: 资产/产品/数据库等
 PARSE_STATUS = 'parse_status', // 解析状态
+COMPANY_TYPE = 'company_type', // 公司类型
+SYS_COMPANY_NAME = 'sys_company_name', // 系统名称
+HAS_BUSINESS_SYS = 'has_business_sys', // 是否有业务系统
+DATA_STORAGE_TYPE = 'data_storage_type', // 数据存储方式
 USAGE_PURPOSE = 'usage_purpose', // 使用用途
 
   // ========== SYSTEM 模块 ==========
